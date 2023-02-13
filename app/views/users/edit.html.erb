@@ -3,9 +3,21 @@
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
       <h2>User info</h2>
       <%= form_with model: @user, method: :patch do |f| %>
-        <%= f.text_field :name %>
-        <%= f.text_area :introduciton %>
-        <%= f.submit 'Update User' %>
+        <div class="form-group">
+          <label for="user_name">Name</label>
+          <%= f.text_field :name, id: "user_name", class: "form-control d-block" %>
+        </div>
+        <div class="form-group">
+          <label for="user_image">Image</label>
+          <%= f.file_field :profile_image, placeholder: "ファイルを選択", id: "user_image", accept: "image/*", class: "d-block" %>
+        </div>
+        <div class="form-group">
+          <label for="user_introduction">Introduction</label>
+          <%= f.text_area :introduction, id: "user_introduciton", class: "form-control d-block" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit 'Update User', class: "btn btn-secondary" %>
+        </div>
       <% end %>
     </div>
   </div>
