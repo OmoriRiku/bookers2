@@ -1,1 +1,12 @@
-<h2>userの編集ページ</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h2>User info</h2>
+      <%= form_with model: @user, method: :patch do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_area :introduciton %>
+        <%= f.submit 'Update User' %>
+      <% end %>
+    </div>
+  </div>
+</div>

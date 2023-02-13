@@ -18,12 +18,14 @@
             <td>
               <%= @book_show.body %>
             </td>
-            <td>
-              <%= link_to 'Edit', edit_book_path(@book_show.id), class: "btn btn-success btn-sm" %>
-            </td>
-            <td>
-              <%= link_to 'Destroy', book_path, method: :delete, class: "btn btn-danger btn-sm" %>
-            </td>
+            <% if @book_show.user == current_user %>
+              <td>
+                <%= link_to 'Edit', edit_book_path(@book_show.id), class: "btn btn-success btn-sm" %>
+              </td>
+              <td>
+                <%= link_to 'Destroy', book_path, method: :delete, class: "btn btn-danger btn-sm" %>
+              </td>
+            <% end %>
           </tr>
         </tbody>
       </table>
