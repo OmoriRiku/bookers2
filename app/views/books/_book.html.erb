@@ -28,6 +28,6 @@
     <label for="book_body">Option</label>
     <%= f.text_area :body, id: "book_body", class: "form_control d-block" %>
   </div>
-  <%= f.submit 'Create Book', class: "btn btn-success" %>
+  <%= f.submit 'Create Book', method: :post, class: "btn btn-success" %>
 <% end %>
 </div>

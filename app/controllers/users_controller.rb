@@ -8,13 +8,11 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(current_user.id)
+    @book = Book.new
     @book_show = @user.books
   end
   
   def edit
   end
-  
-  def user_params
-    params.require(:users).permit(:name, :introduction, :image)
-  end
+
 end
