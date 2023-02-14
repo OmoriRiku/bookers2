@@ -258,8 +258,8 @@ Userモデルのテスト
     他人のユーザ情報編集画面
 [32m      遷移できず、自分のユーザ詳細画面にリダイレクトされる[0m
   グリッドシステムのテスト: container, row, col-md-〇を正しく使えている
-[31m    ユーザ一覧画面 (FAILED - 14)[0m
-[31m    ユーザ詳細画面 (FAILED - 15)[0m
+[32m    ユーザ一覧画面[0m
+[32m    ユーザ詳細画面[0m
 [32m    投稿一覧画面[0m
 [32m    投稿詳細画面[0m
   アイコンのテスト
@@ -290,8 +290,8 @@ Failures:
      [31m[0m
      [31mActionView::Template::Error:[0m
      [31m  undefined method `get_profile_image' for nil:NilClass[0m
-     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_24540'[0m
-     [36m# ./app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__2727402747518954082_28080'[0m
+     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_24520'[0m
+     [36m# ./app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__3919492759563179665_28060'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/rendering.rb:20:in `with_renderer'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
@@ -329,15 +329,15 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `get_profile_image' for nil:NilClass[0m
-     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_24540'[0m
+     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_24520'[0m
 
   2) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ詳細画面
      [31mFailure/Error: [0m<[31m[1;31m%=[0m[31m link_to edit_user_path(current_user.id), class: "btn btn-outline-secondary btn-block" do %>[0m[0m
      [31m[0m
      [31mActionView::Template::Error:[0m
      [31m  undefined method `id' for nil:NilClass[0m
-     [36m# ./app/views/books/_book.html.erb:17:in `_app_views_books__book_html_erb__1178689380043669329_24540'[0m
-     [36m# ./app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___652902193399861647_24520'[0m
+     [36m# ./app/views/books/_book.html.erb:17:in `_app_views_books__book_html_erb__2519266617110827850_24520'[0m
+     [36m# ./app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___3163514591225477885_24500'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/rendering.rb:20:in `with_renderer'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
@@ -375,15 +375,15 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `id' for nil:NilClass[0m
-     [36m#   ./app/views/books/_book.html.erb:17:in `_app_views_books__book_html_erb__1178689380043669329_24540'[0m
+     [36m#   ./app/views/books/_book.html.erb:17:in `_app_views_books__book_html_erb__2519266617110827850_24520'[0m
 
   3) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿一覧画面
      [31mFailure/Error: [0m<[31m[1;31m%=[0m[31m image_tag user.get_profile_image(100,100) %>[0m[0m
      [31m[0m
      [31mActionView::Template::Error:[0m
      [31m  undefined method `get_profile_image' for nil:NilClass[0m
-     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_28620'[0m
-     [36m# ./app/views/books/index.html.erb:13:in `_app_views_books_index_html_erb___1759964222021879258_28600'[0m
+     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_28600'[0m
+     [36m# ./app/views/books/index.html.erb:13:in `_app_views_books_index_html_erb__81738345479145916_28580'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/rendering.rb:20:in `with_renderer'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
@@ -421,15 +421,15 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `get_profile_image' for nil:NilClass[0m
-     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_28620'[0m
+     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_28600'[0m
 
   4) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿詳細画面
      [31mFailure/Error: [0m<[31m[1;31m%=[0m[31m image_tag user.get_profile_image(100,100) %>[0m[0m
      [31m[0m
      [31mActionView::Template::Error:[0m
      [31m  undefined method `get_profile_image' for nil:NilClass[0m
-     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_28620'[0m
-     [36m# ./app/views/books/show.html.erb:3:in `_app_views_books_show_html_erb___1188427357666600631_35340'[0m
+     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_28600'[0m
+     [36m# ./app/views/books/show.html.erb:3:in `_app_views_books_show_html_erb___742642385585317262_35300'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/rendering.rb:20:in `with_renderer'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
@@ -467,15 +467,15 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `get_profile_image' for nil:NilClass[0m
-     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_28620'[0m
+     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_28600'[0m
 
   5) [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿編集画面
      [31mFailure/Error: [0m<[31m[1;31m%=[0m[31m image_tag user.get_profile_image(100,100) %>[0m[0m
      [31m[0m
      [31mActionView::Template::Error:[0m
      [31m  undefined method `get_profile_image' for nil:NilClass[0m
-     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_28620'[0m
-     [36m# ./app/views/books/index.html.erb:13:in `_app_views_books_index_html_erb___1759964222021879258_28600'[0m
+     [36m# ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_28600'[0m
+     [36m# ./app/views/books/index.html.erb:13:in `_app_views_books_index_html_erb__81738345479145916_28580'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/rendering.rb:20:in `with_renderer'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7.2/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
@@ -515,16 +515,16 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `get_profile_image' for nil:NilClass[0m
-     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__1178689380043669329_28620'[0m
+     [36m#   ./app/views/books/_book.html.erb:3:in `_app_views_books__book_html_erb__2519266617110827850_28600'[0m
 
   6) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
      [31mFailure/Error: [0m[32mexpect[0m(page).to have_link other_book.user.name, [35mhref[0m: user_path(other_book.user)[0m
-     [31m  expected to find link "cpbnwc94f4" with href "/users/1" but there were no matches[0m
+     [31m  expected to find link "n58s67kz1i" with href "/users/1" but there were no matches[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:226:in `block (5 levels) in <main>'[0m
 
   7) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
      [31mFailure/Error: [0m[32mexpect[0m(page).to have_content other_user.name[0m
-     [31m  expected to find text "2i7ngmb47r" in "Bookers2\nHome Users Books Log out\nUser info\nname y0n5006wey introduction rnrq1ogk449m4z0eb03e\nNew book\nTitle\nOption\nBook detail\ny0n5006wey aisfp nadnlvtdr8ubnslgwql6\nCopyRight Infratop.inc"[0m
+     [31m  expected to find text "h43tioujuq" in "Bookers2\nHome Users Books Log out\nUser info\nname nmx89muym5 introduction ejgz3yu53xjnge9fggra\nNew book\nTitle\nOption\nBook detail\nnmx89muym5 s79tm 9yhbb9l2d93lm90lmedz\nCopyRight Infratop.inc"[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:244:in `block (5 levels) in <main>'[0m
 
   8) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
@@ -534,7 +534,7 @@ Failures:
 
   9) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
      [31mFailure/Error: [0m[32mexpect[0m(page).not_to have_content user.name[0m
-     [31m  expected not to find text "w42iujqwkt" in "Bookers2\nHome Users Books Log out\nUser info\nname w42iujqwkt introduction fjx69xspzvy9w2vgf4z5\nNew book\nTitle\nOption\nBook detail\nw42iujqwkt t8qx0 a8abum3f47yxlgmg2g9q\nCopyRight Infratop.inc"[0m
+     [31m  expected not to find text "709q79tjz1" in "Bookers2\nHome Users Books Log out\nUser info\nname 709q79tjz1 introduction bpw7jfrnz17w32koiwfr\nNew book\nTitle\nOption\nBook detail\n709q79tjz1 lm345 hsigwpxi0azesmrmmv0s\nCopyRight Infratop.inc"[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:251:in `block (5 levels) in <main>'[0m
 
   10) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
@@ -557,18 +557,8 @@ Failures:
       [31m  expected not to find visible link "" with href "/users/2/edit", found 1 match: ""[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:304:in `block (5 levels) in <main>'[0m
 
-  14) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ一覧画面
-      [31mFailure/Error: [0mis_expected.to have_selector [31m[1;31m'[0m[31m.container .row .col-md-8.offset-md-1[1;31m'[0m[31m[0m[0m
-      [31m  expected to find css ".container .row .col-md-8.offset-md-1" but there were no matches[0m
-      [36m# ./spec/system/03_finishing_touches_spec.rb:330:in `block (3 levels) in <main>'[0m
-
-  15) [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ詳細画面
-      [31mFailure/Error: [0mis_expected.to have_selector [31m[1;31m'[0m[31m.container .row .col-md-8.offset-md-1[1;31m'[0m[31m[0m[0m
-      [31m  expected to find css ".container .row .col-md-8.offset-md-1" but there were no matches[0m
-      [36m# ./spec/system/03_finishing_touches_spec.rb:335:in `block (3 levels) in <main>'[0m
-
-Finished in 49.92 seconds (files took 5.87 seconds to load)
-[31m199 examples, 15 failures[0m
+Finished in 48.69 seconds (files took 2.84 seconds to load)
+[31m199 examples, 13 failures[0m
 
 Failed examples:
 
@@ -585,6 +575,4 @@ Failed examples:
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:276[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト 表示の確認 投稿一覧のユーザ画像のリンク先が正しい[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:296[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:303[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人のユーザ詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:327[0m [36m# [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ一覧画面[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:332[0m [36m# [STEP3] 仕上げのテスト グリッドシステムのテスト: container, row, col-md-〇を正しく使えている ユーザ詳細画面[0m
 
