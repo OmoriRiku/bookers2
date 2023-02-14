@@ -8,21 +8,21 @@
           <tr>
             <td>
               <%= link_to user_path(current_user.id) do %>
-                <%= image_tag @book_id.user.get_profile_image(100,100) %><br />
+                <%= image_tag @book_show.user.get_profile_image(100,100) %><br />
                 <%= @user.name %>
               <% end %>
             </td>
             <td>
-              <%= link_to book_path(@book_id.id) do %>
-                <%= @book_id.title %>
+              <%= link_to book_path(@book_show.id) do %>
+                <%= @book_show.title %>
               <% end %>
             </td>
             <td>
-              <%= @book_id.body %>
+              <%= @book_show.body %>
             </td>
-            <% if @book_id.user == current_user %>
+            <% if @book_show.user == current_user %>
               <td>
-                <%= link_to 'Edit', edit_book_path(@book_id), class: "btn btn-success btn-sm" %>
+                <%= link_to 'Edit', edit_book_path(@book_show), class: "btn btn-success btn-sm" %>
               </td>
               <td>
                 <%= link_to 'Destroy', book_path, method: :delete, class: "btn btn-danger btn-sm" %>
