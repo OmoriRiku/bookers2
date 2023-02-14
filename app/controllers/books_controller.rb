@@ -23,14 +23,16 @@ class BooksController < ApplicationController
   def show
     @user = current_user
     @book = Book.new
-    @book_show = Book.find(params[:id])
+    @book_id = Book.find(params[:id])
   end
 
   def edit
+    is_matching_book_user
     @book = Book.find(params[:id])
   end
   
   def update
+    is_matching_book_user
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice] = "book update successfully"
@@ -48,6 +50,14 @@ class BooksController < ApplicationController
   end
   
   private
+  
+  def is_matching_book_user
+    book_id = Book.find(params[:id])
+    unless book_id.user == current_user
+      redirect_to books_path
+    end
+  end
+  
   def book_params
     params.require(:book).permit(:title, :body)
   end
