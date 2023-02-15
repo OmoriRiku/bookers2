@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :is_matching_book_user, only: [:edit, :update]
 
   def index
     @book = Book.new
@@ -20,18 +21,16 @@ class BooksController < ApplicationController
   end
 
   def show
-    @user = current_user
     @book = Book.new
     @book_show = Book.find(params[:id])
+    @user = @book_show.user
   end
 
   def edit
-    is_matching_book_user
     @book = Book.find(params[:id])
   end
   
   def update
-    is_matching_book_user
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice] = "book update successfully"
